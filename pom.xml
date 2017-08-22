@@ -195,5 +195,19 @@
 
   <build>
     <finalName>web-ssm</finalName>
+    <resources>
+        <resource>
+          <directory>src/main/java</directory>
+          <includes>**/*.xml</includes>
+        </resource>
+        <resource>
+          <directory>src/main/resources/${package.environment}</directory>
+          <includes>
+            <include>*.xml</include>
+            <include>*.properties</include>
+          </includes>
+        </resource>
+
+    </resources>
   </build>
 </project>
